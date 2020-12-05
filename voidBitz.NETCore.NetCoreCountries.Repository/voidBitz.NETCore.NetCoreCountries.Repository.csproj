@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\voidBitz.NETCore.NetCoreCountries.DataAccess\voidBitz.NETCore.NetCoreCountries.DataAccess.csproj" />
+    <ProjectReference Include="..\voidBitz.NETCore.NetCoreCountries.Models\voidBitz.NETCore.NetCoreCountries.Models.csproj" />
+    <ProjectReference Include="..\voidBitz.NETCore.Repository.Basees\voidBitz.NETCore.Repository.Basees.csproj" />
+  </ItemGroup>
+
+</Project>
