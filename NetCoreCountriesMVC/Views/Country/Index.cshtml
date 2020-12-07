@@ -1,0 +1,97 @@
+﻿@model List<voidBitz.NETCore.NetCoreCountries.Models.Country>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container p-3 bg-white">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Country List</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="Country" asp-action="Upsert" class="btn btn-primary">
+                <i class="fas fa-plus"></i>&nbsp;Create New Country
+            </a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="text-center">
+        <button class="btn btn-dark filter-button" data-filter="all">All</button>
+        @{
+            IList<char> chars = new List<char>();
+
+            foreach (var country in Model)
+            {
+                if (!chars.Contains(country.Name[0]))
+                {
+                    chars.Add(country.Name[0]);
+                }
+            }
+        }
+
+        @foreach (var obj in chars.OrderBy(c => c))
+        {
+            <button class="btn btn-outline-secondary filter-button" data-filter="@obj">@obj</button>
+        }
+    </div>
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped" stye="width: 100%">
+            <thead>
+                <tr>
+                    <th class="w-50">
+                        Name
+                    </th>
+                    <th class="w-25">
+                        Abbreviation
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    <tr class="filter @obj.Name[0]">
+                        <td class="w-50">@obj.Name</td>
+                        <td class="w-25">@obj.Abbreviation</td>
+                        <td class="text-center w-25">
+                            <div class="w-100 btn-group" role="group">
+                                <a asp-route-Id="@obj.Id" asp-action="Upsert" class="btn btn-primary mx-2">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a asp-route-Id="@obj.Id" asp-action="Delete" class="btn btn-danger mx-2">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p> No countries exist in the database</p>
+    }
+</div>
+
+@section Scripts {
+    <script>
+            $(document).ready(function(){
+
+                    $(".filter-button").click(function(){
+
+                        var value = $(this).attr('data-filter');
+                        if(value == "all")
+                        {
+                            $('.filter').show('1000');
+                        }
+                        else
+                        {
+                            $(".filter").not('.'+value).hide('3000');
+                            $('.filter').filter('.'+value).show('3000');
+
+                        }
+                    });
+            });
+    </script>
+}
