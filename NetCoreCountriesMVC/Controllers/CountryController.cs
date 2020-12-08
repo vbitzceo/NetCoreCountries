@@ -52,14 +52,14 @@ namespace NetCoreCountriesMVC.Views.Home
             {
                 if (_countryRepository.Exists(a => a.Id != model.Id && a.Name.Equals(model.Name)))
                 {
-                    TempData[AppConstants.Failure] = string.Format(AppConstants.Notification_Error, String.Format(AppConstants.ExistsErrorString, "country"));
-                    ModelState.AddModelError("Text", String.Format(AppConstants.ExistsErrorString, "country"));
+                    TempData[AppConstants.Failure] = string.Format(AppConstants.Notification_Error, String.Format(AppConstants.ExistsErrorString, model.Name));
+                    ModelState.AddModelError("Text", String.Format(AppConstants.ExistsErrorString, model.Name));
                     return View(model);
                 }
 
                 if (_countryRepository.Upsert(model))
                 {
-                    TempData[AppConstants.Success] = string.Format(AppConstants.Notification_Saved, "country");
+                    TempData[AppConstants.Success] = string.Format(AppConstants.Notification_Saved, model.Name);
                     return RedirectToAction(nameof(Index));
                 }
                 else
@@ -102,8 +102,11 @@ namespace NetCoreCountriesMVC.Views.Home
                 return NotFound();
             }
 
+            var name = objFromDB.Name;
+
             _countryRepository.RemoveWithSave(objFromDB);
 
+            TempData[AppConstants.Success] = string.Format(AppConstants.Notification_Deleted, name);
             return RedirectToAction(nameof(Index));
         }
 

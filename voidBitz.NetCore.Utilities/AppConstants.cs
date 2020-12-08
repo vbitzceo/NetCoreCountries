@@ -16,5 +16,6 @@ namespace voidBitz.NetCore.Utilities
 
         public static string Notification_Saved = "{0} saved.";
         public static string Notification_Error = "{0}";
+        public static string Notification_Deleted = "{0} Deleted.";
     }
 }
