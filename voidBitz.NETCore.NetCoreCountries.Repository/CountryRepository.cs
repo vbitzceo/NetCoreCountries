@@ -1,6 +1,7 @@
-﻿using System;
-using voidBitz.NETCore.NetCoreCountries.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using voidBitz.NETCore.NetCoreCountries.DataAccess;
+using voidBitz.NETCore.NetCoreCountries.Models;
 using voidBitz.NETCore.NetCoreCountries.Repository.Interfaces;
 
 namespace voidBitz.NETCore.NetCoreCountries.Repository
@@ -15,7 +16,11 @@ namespace voidBitz.NETCore.NetCoreCountries.Repository
 
         public Country GetById(int id, bool includeNavigationProperties = false)
         {
-            throw new NotImplementedException();
+            Country country;
+
+            country = _db.Country.AsNoTracking().FirstOrDefault(c => c.Id == id);
+           
+            return country;
         }
 
         public bool Upsert(Country entity)

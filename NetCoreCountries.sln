@@ -3,21 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreCountriesMVC", "NetCoreCountriesMVC\NetCoreCountriesMVC.csproj", "{50F6E5CD-DE9E-424B-9336-E7CE53F42524}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreCountriesMVC", "NetCoreCountriesMVC\NetCoreCountriesMVC.csproj", "{50F6E5CD-DE9E-424B-9336-E7CE53F42524}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "voidBitz.NETCore.Repository.Basees", "voidBitz.NETCore.Repository.Basees\voidBitz.NETCore.Repository.Basees.csproj", "{2DF03ABA-D24A-4804-A7C5-697E494E064B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "voidBitz.NETCore.NetCoreCountries.Models", "voidBitz.NETCore.NetCoreCountries.Models\voidBitz.NETCore.NetCoreCountries.Models.csproj", "{317D8920-E700-42C1-B841-ADD156187691}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "voidBitz.NETCore.NetCoreCountries.Models", "voidBitz.NETCore.NetCoreCountries.Models\voidBitz.NETCore.NetCoreCountries.Models.csproj", "{317D8920-E700-42C1-B841-ADD156187691}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "voidBitz.NETCore.NetCoreCountries.DataAccess", "voidBitz.NETCore.NetCoreCountries.DataAccess\voidBitz.NETCore.NetCoreCountries.DataAccess.csproj", "{169DE665-732F-47E8-BAA0-CEC8FDF30749}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "voidBitz.NETCore.NetCoreCountries.DataAccess", "voidBitz.NETCore.NetCoreCountries.DataAccess\voidBitz.NETCore.NetCoreCountries.DataAccess.csproj", "{169DE665-732F-47E8-BAA0-CEC8FDF30749}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "voidBitz.NETCore.NetCoreCountries.Repository", "voidBitz.NETCore.NetCoreCountries.Repository\voidBitz.NETCore.NetCoreCountries.Repository.csproj", "{D24D9D1E-5751-4E6A-B4B6-7014EC0C9CD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "voidBitz.NETCore.NetCoreCountries.Repository", "voidBitz.NETCore.NetCoreCountries.Repository\voidBitz.NETCore.NetCoreCountries.Repository.csproj", "{D24D9D1E-5751-4E6A-B4B6-7014EC0C9CD9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FD3AE7B8-353B-4D91-9F84-1EAAA731A531}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "voidBitz.NetCore.Utilities", "voidBitz.NetCore.Utilities\voidBitz.NetCore.Utilities.csproj", "{6B297F58-9589-4039-B747-5DA2D4A97627}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D24D9D1E-5751-4E6A-B4B6-7014EC0C9CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D24D9D1E-5751-4E6A-B4B6-7014EC0C9CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D24D9D1E-5751-4E6A-B4B6-7014EC0C9CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B297F58-9589-4039-B747-5DA2D4A97627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B297F58-9589-4039-B747-5DA2D4A97627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B297F58-9589-4039-B747-5DA2D4A97627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B297F58-9589-4039-B747-5DA2D4A97627}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
