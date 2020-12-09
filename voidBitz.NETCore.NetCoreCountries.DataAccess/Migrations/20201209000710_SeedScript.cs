@@ -2,7 +2,7 @@
 
 namespace voidBitz.NETCore.NetCoreCountries.DataAccess.Migrations
 {
-    public partial class seeddata : Migration
+    public partial class SeedScript : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

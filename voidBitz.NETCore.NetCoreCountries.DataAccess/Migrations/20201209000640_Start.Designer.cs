@@ -8,8 +8,8 @@ using voidBitz.NETCore.NetCoreCountries.DataAccess;
 namespace voidBitz.NETCore.NetCoreCountries.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201205032911_start")]
-    partial class start
+    [Migration("20201209000640_Start")]
+    partial class Start
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,6 +27,7 @@ namespace voidBitz.NETCore.NetCoreCountries.DataAccess.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
