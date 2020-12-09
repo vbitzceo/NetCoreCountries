@@ -102,11 +102,9 @@ namespace NetCoreCountriesMVC.Views.Home
                 return NotFound();
             }
 
-            var name = objFromDB.Name;
-
             _countryRepository.RemoveWithSave(objFromDB);
 
-            TempData[AppConstants.Success] = string.Format(AppConstants.Notification_Deleted, name);
+            TempData[AppConstants.Success] = string.Format(AppConstants.Notification_Deleted, objFromDB.Name);
             return RedirectToAction(nameof(Index));
         }
 

@@ -2,7 +2,7 @@
 
 namespace voidBitz.NETCore.NetCoreCountries.DataAccess.Migrations
 {
-    public partial class start : Migration
+    public partial class Start : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace voidBitz.NETCore.NetCoreCountries.DataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
                     Abbreviation = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>

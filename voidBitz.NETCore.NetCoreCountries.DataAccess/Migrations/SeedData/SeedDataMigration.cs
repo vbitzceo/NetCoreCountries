@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using System.IO;
-using voidBitz.NETCore.vbzSurvey.DataAccess.SqlScripts;
 
 //Put this in the first migration
 //var seeder = new SeedData.SeedDataMigration();
@@ -12,7 +11,6 @@ namespace voidBitz.NETCore.NetCoreCountries.DataAccess.Migrations.SeedData
     {
         public void Seed(MigrationBuilder migrationBuilder)
         {
-            var countriesFile = Path.Combine(SqlScriptsConstants.SqlScriptsFolderPath, @"Countries.sql");
             migrationBuilder.Sql(@"INSERT INTO Country (ID, Name, Abbreviation) VALUES (1,'United States','US');
                     INSERT INTO Country (ID, Name, Abbreviation) VALUES (3,'Canada','CA');
                     INSERT INTO Country (ID, Name, Abbreviation) VALUES (4,'Afghanistan','AF');
